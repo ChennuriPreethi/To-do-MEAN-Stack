@@ -1,0 +1,58 @@
+<body>
+<div class="title">
+    {{title}}
+</div>
+<div class="container-fluid" >
+  <div class="row" >
+    <div class="col-md-4 todo-img">
+        <img src="../../assets/Images/todo1.gif" class="rounded-circle img-fluid" alt="" />
+    </div>
+    <div class="col-md-8 todoform" >
+      <form [formGroup]="ToDoTask">
+        <div class="row mt-5 form-group">
+            <div class="col-md-6 ">
+                <input type="text" class="form-control" formControlName="name"
+                    [ngClass]="{ 'is-invalid': submitted && f.name.errors }" placeholder="Enter Task" value="">
+                <div>
+                    <h6 *ngIf="f.name.touched && f.name.errors?.required" style="color:red">
+                        *Task Required...!!!
+                    </h6>
+                </div>
+            </div>
+            </div>
+            <div class="row mt-2 ">
+            <div class="col-md-6">
+                <input type="text" class="form-control" formControlName="description"
+                    [ngClass]="{ 'is-invalid': submitted && f.description.errors }" placeholder="Enter Description">
+                <div>
+                    <h6 *ngIf="f.description.touched && f.description.errors?.required" style="color:red">
+                        *Description Required...!!!
+                    </h6>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-md-6">
+                <input type="date" class="form-control" formControlName="date"
+                    [ngClass]="{ 'is-invalid': submitted && f.date.errors }"
+                    placeholder="" value="">
+                <div>
+                    <h6 *ngIf="f.date.touched && f.date.errors?.required" style="color:red">
+                        *Date Required...!!!
+                    </h6>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-md-12">
+            <button class="btn btn-success" [disabled]="!ToDoTask.valid" (click)="addTask()" type="button"
+            style="color: white;">Add Task</button>
+          </div> 
+      </div>
+    </form>
+    
+      </div>
+      
+    </div>
+  </div> 
+</body>

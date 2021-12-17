@@ -1,0 +1,34 @@
+*{
+    
+font-family: 'Merriweather', serif;
+
+}
+
+.title{
+    /* background: pink; */
+    padding: 50px;
+    color: indianred;
+    text-align: center;
+    font-size: 50px;
+}
+
+.todoform{
+    margin-top: -2%;
+}
+
+.todo-img{
+    margin-top: -5%;
+}
+
+.add{
+    border:3px solid;
+    padding:10px;
+}
+
+#task{
+    padding: 10px;
+}
+
+.done{
+    text-decoration: line-through;
+}
