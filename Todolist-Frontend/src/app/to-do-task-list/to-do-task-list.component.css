@@ -1,0 +1,24 @@
+*{
+    font-family: 'Merriweather', serif;
+}
+
+a{
+    text-decoration: none;
+    float: right;
+    padding: 10px;
+}
+
+.table{
+    border: 2px solid;
+}
+
+.table th{
+    text-align: center;
+    border-bottom: 2px solid;
+    border-right: 2px solid;
+}
+
+.table td{
+    border-right:2px solid;
+    text-align: center;
+}
